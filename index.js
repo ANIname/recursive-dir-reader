@@ -1,6 +1,7 @@
 'use strict';
 
 const {each} = require('async');
+const {promisify} = require('util');
 const fs = require('fs');
 
 /**
@@ -11,31 +12,29 @@ const fs = require('fs');
 function async(dir, callback = undefined) {
   const paths = [];
 
-  startReading(dir, callback);
-
-  function startReading(dir, callback) {
-    fs.readdir(dir, (err, items) => {
-      if (err) throw console.error(err);
-
-      each(items, itemName => {
-        const path = `${dir}/${itemName}`;
-
-        fs.stat(path, (err, stat) => {
-          if (err) throw console.error(err);
-
-          if (stat.isDirectory()) startReading(path, callback);
-
-          else {
-            if (callback) callback(path);
-
-            paths.push(path);
-          }
-        });
-      });
-    });
+  try {
+    startReading(dir, callback);
+  } catch (error) {
+    throw console.error(error);
   }
 
   return paths;
+
+  async function startReading(dir, callback) {
+    const items = await promisify(fs.readdir)(dir);
+
+    each(items, async itemName => {
+      const path = `${dir}/${itemName}`;
+
+      const stat = await promisify(fs.stat)(path);
+
+      if (stat.isDirectory()) return startReading(path, callback);
+
+      if (callback) callback(path);
+
+      paths.push(path);
+    });
+  }
 }
 
 /**
