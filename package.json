@@ -1,6 +1,6 @@
 {
   "name": "recursive-dir-reader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "reading directory and subdirectories",
   "main": "index.js",
   "repository": {
