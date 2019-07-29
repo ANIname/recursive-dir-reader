@@ -8,42 +8,60 @@ const fs = require('fs');
  * @param {string} dir - A path to a directory
  * @param {function|undefined} callback - Calls the function one time for each item in the folder.
  */
-function async(dir, callback) {
+function async(dir, callback = undefined) {
   const paths = [];
 
-  fs.readdir(dir, (err, items) => {
-    if (err) throw console.error(err);
+  startReading(dir, callback);
 
-    each(items, itemName => {
-      const path = `${dir}/${itemName}`;
+  function startReading(dir, callback) {
+    fs.readdir(dir, (err, items) => {
+      if (err) throw console.error(err);
 
-      fs.stat(path, (err, stat) => {
-        if (err) throw console.error(err);
+      each(items, itemName => {
+        const path = `${dir}/${itemName}`;
 
-        if (stat.isDirectory()) async(path, callback);
+        fs.stat(path, (err, stat) => {
+          if (err) throw console.error(err);
 
-        else {
-          if (callback) callback(path);
+          if (stat.isDirectory()) startReading(path, callback);
 
-          paths.push(path);
-        }
+          else {
+            if (callback) callback(path);
+
+            paths.push(path);
+          }
+        });
       });
     });
-  });
+  }
 
   return paths;
 }
 
-function sync(dir, callback) {
+/**
+ * Synchronous Get All Files In Directory & Subdirectories
+ * @param {string} dir - A path to a directory
+ * @param {function|undefined} callback - Calls the function one time for each item in the folder.
+ */
+function sync(dir, callback = undefined) {
+  const paths = [];
+
   try {
-    const paths = [];
+    startReading(dir, callback);
+  } catch (err) {
+    throw console.error(err);
+  }
+
+  return paths;
+
+  function startReading(dir, callback) {
     const items = fs.readdirSync(dir);
 
     each(items, itemName => {
       const path = `${dir}/${itemName}`;
       const isDirectory = fs.statSync(path).isDirectory();
 
-      if (isDirectory) sync(path, callback);
+      if (isDirectory) startReading(path, callback);
 
       else {
         if (callback) callback(path);
@@ -51,10 +69,6 @@ function sync(dir, callback) {
         paths.push(path);
       }
     });
-
-    return paths;
-  } catch (err) {
-    throw console.error(err);
   }
 }
 
