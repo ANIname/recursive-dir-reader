@@ -1,6 +1,6 @@
 {
   "name": "recursive-dir-reader",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "reading directory and subdirectories",
   "main": "index.js",
   "repository": {
@@ -8,6 +8,8 @@
     "url": "git+https://github.com/KiiDii/readdir.git"
   },
   "keywords": [
+    "sync",
+    "async",
     "read",
     "dir",
     "reading",
