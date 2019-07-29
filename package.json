@@ -1,0 +1,27 @@
+{
+  "name": "read-dir-recursive",
+  "version": "0.0.1",
+  "description": "reading directory and subdirectories",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KiiDii/readdir.git"
+  },
+  "keywords": [
+    "read",
+    "dir",
+    "reading",
+    "directory",
+    "subdirectories",
+    "recursive"
+  ],
+  "author": "KiiDii <https:t.me/kiidii_aniname>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KiiDii/readdir/issues"
+  },
+  "homepage": "https://github.com/KiiDii/readdir#readme",
+  "dependencies": {
+    "async": "^3.1.0"
+  }
+}
