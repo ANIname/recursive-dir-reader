@@ -61,5 +61,26 @@ setTimeout(() => {
 //   './someDir/someSubDir/someModule2.js',
 //   './someDir/someSubDir/folderWithOneFile/template.html'
 // ]
+```
+You can easily combine this methods.
+```javascript
+const filesIntoDirAsync = readdir.async('./someDir', path => {
+  console.info(path);
+});
+// ./someDir/someFile1.js
+// ./someDir/someFile2.js
+// ./someDir/someSubDir/someModule1.js
+// ./someDir/someSubDir/someModule2.js
+// ./someDir/someSubDir/folderWithOneFile/template.html
 
+setTimeout(() => {
+  console.info(filesIntoDirAsync);
+}, 1000);
+// [
+//   './someDir/someFile1.js',
+//   './someDir/someFile2.js',
+//   './someDir/someSubDir/someModule1.js',
+//   './someDir/someSubDir/someModule2.js',
+//   './someDir/someSubDir/folderWithOneFile/template.html'
+// ]
 ```
