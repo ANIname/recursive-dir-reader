@@ -11,7 +11,7 @@ const readdir = require('recursive-dir-reader');
 // Code
 ```
 
-##Usage
+## Usage
 For example, we have the following directory structure:
 
 ![alt text](https://cdn.discordapp.com/attachments/413313254354583557/605248635336261666/32fcb07c1a251e78.PNG)
