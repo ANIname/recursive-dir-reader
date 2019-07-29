@@ -1,5 +1,5 @@
 {
-  "name": "read-dir-recursive",
+  "name": "recursive-dir-reader",
   "version": "0.0.1",
   "description": "reading directory and subdirectories",
   "main": "index.js",
