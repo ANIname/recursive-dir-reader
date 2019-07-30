@@ -20,6 +20,7 @@ In the code below, we gave several examples of how to read this directory and al
 ```javascript
 const readdir = require('recursive-dir-reader');
 
+// EX 1
 readdir.sync('./someDir', path => {
   console.info(path);
 });
@@ -29,6 +30,8 @@ readdir.sync('./someDir', path => {
 // ./someDir/someSubDir/someModule1.js
 // ./someDir/someSubDir/someModule2.js
 
+
+// EX 2
 readdir.async('./someDir', path => {
   console.info(path);
 });
@@ -38,6 +41,7 @@ readdir.async('./someDir', path => {
 // ./someDir/someSubDir/someModule2.js
 // ./someDir/someSubDir/folderWithOneFile/template.html
 
+// EX 3
 const filesIntoDirSync = readdir.sync('./someDir');
 
 console.info(filesIntoDirSync);
@@ -49,6 +53,7 @@ console.info(filesIntoDirSync);
 //   './someDir/someSubDir/someModule2.js'
 // ]
 
+// EX 4
 const filesIntoDirAsync = readdir.async('./someDir');
 
 setTimeout(() => {
