@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KiiDii/readdir.git"
+    "url": "git+https://github.com/KiiDii/recursive-dir-reader.git"
   },
   "keywords": [
     "sync",
@@ -20,9 +20,9 @@
   "author": "KiiDii <https:t.me/kiidii_aniname>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KiiDii/readdir/issues"
+    "url": "https://github.com/KiiDii/recursive-dir-reader/issues"
   },
-  "homepage": "https://github.com/KiiDii/readdir#readme",
+  "homepage": "https://github.com/KiiDii/recursive-dir-reader#readme",
   "dependencies": {
     "async": "^3.1.0"
   }
