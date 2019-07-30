@@ -9,7 +9,7 @@ const fs = require('fs');
  * @param {string} dir - A path to a directory
  * @param {function|undefined} callback - Calls the function one time for each item in the folder.
  */
-function async(dir, callback = undefined) {
+exports.async = (dir, callback = undefined) => {
   if (callback && typeof callback !== 'function') {
     throw new Error('Expected callback function');
   }
@@ -39,14 +39,14 @@ function async(dir, callback = undefined) {
       paths.push(path);
     });
   }
-}
+};
 
 /**
  * Synchronous Get All Files In Directory & Subdirectories
  * @param {string} dir - A path to a directory
  * @param {function|undefined} callback - Calls the function one time for each item in the folder.
  */
-function sync(dir, callback = undefined) {
+exports.sync = (dir, callback = undefined) => {
   if (callback && typeof callback !== 'function') {
     throw new Error('Expected callback function');
   }
@@ -77,6 +77,4 @@ function sync(dir, callback = undefined) {
       }
     });
   }
-}
-
-module.exports = {async, sync};
+};
