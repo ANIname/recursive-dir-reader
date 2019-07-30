@@ -10,6 +10,10 @@ const fs = require('fs');
  * @param {function|undefined} callback - Calls the function one time for each item in the folder.
  */
 function async(dir, callback = undefined) {
+  if (callback && typeof callback !== 'function') {
+    throw new Error('Expected callback function');
+  }
+
   const paths = [];
 
   try {
@@ -43,6 +47,10 @@ function async(dir, callback = undefined) {
  * @param {function|undefined} callback - Calls the function one time for each item in the folder.
  */
 function sync(dir, callback = undefined) {
+  if (callback && typeof callback !== 'function') {
+    throw new Error('Expected callback function');
+  }
+
   const paths = [];
 
   try {
