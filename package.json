@@ -1,6 +1,6 @@
 {
   "name": "recursive-dir-reader",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "The module is required for sync or async reading of dir and subdirs",
   "main": "index.js",
   "repository": {
