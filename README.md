@@ -1,9 +1,8 @@
 <div align="center">
   <p>
     <img src="https://img.shields.io/node/v/recursive-dir-reader" alt="Node version required">
-    <img src="https://img.shields.io/npm/v/recursive-dir-reader" alt="Package version">
-    <img src="https://img.shields.io/npm/dt/recursive-dir-reader" alt="Downloads">
     <img src="https://img.shields.io/github/languages/code-size/KiiDii/recursive-dir-reader" alt="GitHub code size">
+    <img src="https://img.shields.io/npm/dt/recursive-dir-reader" alt="Downloads">
     <a href="https://discord.gg/ADFYZtJ">
       <img src="https://img.shields.io/discord/219557939466338304?label=Discord%20chat%20(rus)" alt="Discord server">
     </a>
