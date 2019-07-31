@@ -1,11 +1,22 @@
-![node](https://img.shields.io/node/v/recursive-dir-reader)
-![npm](https://img.shields.io/npm/v/recursive-dir-reader)
-![npm](https://img.shields.io/npm/dt/recursive-dir-reader)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/KiiDii/recursive-dir-reader)
-![GitHub last commit](https://img.shields.io/github/last-commit/KiiDii/recursive-dir-reader)
-![Discord](https://img.shields.io/discord/219557939466338304?label=Discord%20chat)
+<div align="center">
+  <p>
+    <img src="https://img.shields.io/node/v/recursive-dir-reader" alt="Node version required">
+    <img src="https://img.shields.io/npm/v/recursive-dir-reader" alt="Package version">
+    <img src="https://img.shields.io/npm/dt/recursive-dir-reader" alt="Downloads">
+    <img src="https://img.shields.io/github/languages/code-size/KiiDii/recursive-dir-reader" alt="GitHub code size">
+    <a href="https://discord.gg/ADFYZtJ">
+      <img src="https://img.shields.io/discord/219557939466338304?label=Discord chat (rus)" alt="Discord server">
+    </a>
+  </p>
+  <p>
+    <a href="https://nodei.co/npm/recursive-dir-reader/">
+      <img src="https://nodei.co/npm/recursive-dir-reader.png?compact=true">
+    </a>
+  </p>
+</div>
 
-##### The module is required for sync or async reading of dir and subdirs.
+## About
+The module will allow you to **sync** or **async** get all the paths to the files inside the directory and all its sub-directories.
 
 ## Installation
 ```
@@ -96,3 +107,8 @@ setTimeout(() => {
 //   './someDir/someSubDir/folderWithOneFile/template.html'
 // ]
 ```
+
+## Help
+If you don't understand something in the documentation, you are experiencing problems, or you just need a gentle nudge in the right direction, please don't hesitate to join our official [Discord server](https://discord.gg/ADFYZtJ).
+
+Although the server was created for Russian speakers, you can also write in English! We will understand you!
