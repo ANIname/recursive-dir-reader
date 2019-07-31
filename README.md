@@ -5,7 +5,7 @@
     <img src="https://img.shields.io/npm/dt/recursive-dir-reader" alt="Downloads">
     <img src="https://img.shields.io/github/languages/code-size/KiiDii/recursive-dir-reader" alt="GitHub code size">
     <a href="https://discord.gg/ADFYZtJ">
-      <img src="https://img.shields.io/discord/219557939466338304?label=Discord chat (rus)" alt="Discord server">
+      <img src="https://img.shields.io/discord/219557939466338304?label=Discord%chat%(rus)" alt="Discord server">
     </a>
   </p>
   <p>
