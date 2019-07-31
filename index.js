@@ -8,7 +8,7 @@ const fs = require('fs');
  * Asynchronous Get All Files In Directory & Subdirectories
  * @param {string} dir - A path to a directory
  * @param {function|undefined} callback - Calls the function one time for each item in the folder.
- * @return {array} paths
+ * @return {string[]} paths
  */
 exports.async = (dir, callback = undefined) => {
   if (callback && typeof callback !== 'function') {
@@ -46,7 +46,7 @@ exports.async = (dir, callback = undefined) => {
  * Synchronous Get All Files In Directory & Subdirectories
  * @param {string} dir - A path to a directory
  * @param {function|undefined} callback - Calls the function one time for each item in the folder.
- * @return {array} paths
+ * @return {string[]} paths
  */
 exports.sync = (dir, callback = undefined) => {
   if (callback && typeof callback !== 'function') {
