@@ -1,11 +1,14 @@
 {
   "name": "recursive-dir-reader",
-  "version": "1.3.1",
-  "description": "reading directory and subdirectories",
+  "version": "1.3.2",
+  "description": "The module is required for sync or async reading of dir and subdirs",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KiiDii/recursive-dir-reader.git"
+  },
+  "engines": {
+    "node": ">=7.10.1"
   },
   "keywords": [
     "sync",
