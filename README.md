@@ -1,3 +1,10 @@
+![node](https://img.shields.io/node/v/recursive-dir-reader)
+![npm](https://img.shields.io/npm/v/recursive-dir-reader)
+![npm](https://img.shields.io/npm/dt/recursive-dir-reader)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/KiiDii/recursive-dir-reader)
+![GitHub last commit](https://img.shields.io/github/last-commit/KiiDii/recursive-dir-reader)
+![Discord](https://img.shields.io/discord/219557939466338304?label=Discord%20chat)
+
 ##### The module is required for sync or async reading of dir and subdirs.
 
 ## Installation
