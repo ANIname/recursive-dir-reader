@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KiiDii/recursive-dir-reader.git"
+    "url": "git+https://github.com/ANIname/recursive-dir-reader.git"
   },
   "engines": {
     "node": ">=7.10.1"
@@ -23,9 +23,9 @@
   "author": "KiiDii <https:t.me/kiidii_aniname>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KiiDii/recursive-dir-reader/issues"
+    "url": "https://github.com/ANIname/recursive-dir-reader/issues"
   },
-  "homepage": "https://github.com/KiiDii/recursive-dir-reader#readme",
+  "homepage": "https://github.com/ANIname/recursive-dir-reader#readme",
   "dependencies": {
     "async": "^3.1.0"
   }
